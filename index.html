@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Villa Le Tertre 28 - Luxe pour grands groupes</title>
+    <link rel="shortcut icon" href="logo_3.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="Crazy Villa Le Tertre 28 – Piscine Chauffée – 44 Personnes">
+    <meta property="og:description" content="Découvrez une villa spacieuse de 12 chambres avec piscine chauffée, jardin, terrasse et salle de jeux. Située à seulement 2 heures de Paris, parfaite pour événements et séjours en groupe.">
+    <meta property="og:image" content="logo.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card (optional but recommended) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crazy Villa Le Tertre 28 – Piscine Chauffée – 44 Personnes">
+    <meta name="twitter:description" content="Villa de luxe près de Paris avec piscine chauffée et capacité jusqu’à 44 invités. Idéale pour grands séjours et événements.">
+    <meta name="twitter:image" content="logo.jpg">
+
+
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #f0f8ff, #e6f2ff);
+            color: #333;
+        }
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #1e90ff !important;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://media.vrbo.com/lodging/82000000/81520000/81510900/81510855/76799030.jpg') center/cover no-repeat;
+            height: 80vh;
+            min-height: 600px;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1, h2 {
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: #1e90ff;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .amenity-card {
+            transition: all 0.4s ease;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .amenity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(30,144,255,0.3);
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.08);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px 15px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            text-align: center;
+            font-weight: 600;
+        }
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        .reserve-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(255,69,0,0.4);
+            animation: pulse 2s infinite;
+            transition: all 0.3s;
+        }
+        .reserve-btn:hover {
+            background: #ff6347;
+            transform: scale(1.1);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,69,0,0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255,69,0,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,69,0,0); }
+        }
+        .price-tag {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        /* Posição do widget Google Translate */
+        #google_translate_element {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            z-index: 99999999;
+        }
+        #google_translate_element select {
+            padding: 10px;
+            background: white;
+            border: 1px solid #1e90ff;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Widget Google Translate (botão para traduzir para qualquer idioma) -->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',  // Idioma original: francês
+                includedLanguages: '',  // Deixa vazio para permitir todas as línguas
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Crazy Villa Le Tertre 28</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#amenities">Équipements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservation">Réservation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div>
+            <h1 class="display-3 fw-bold">Crazy Villa Le Tertre 28</h1>
+            <p class="lead fs-3">Piscine chauffée • Terrain de basket • Luxe pour jusqu'à 44 personnes • Seulement 2h de Paris</p>
+            <div class="price-tag">À partir de 2 500 € / nuit</div>
+        </div>
+    </section>
+
+    <section id="about" class="container my-5 py-5 text-center">
+        <h2 class="section-title">À propos de la Villa</h2>
+        <p class="lead">Villa de luxe géante à Le Poislay, France. 12 chambres, 8 salles de bain, parfaite pour grands groupes, familles ou événements. Piscine chauffée privée, terrain de basket, grand jardin et bien plus. Idéale pour des escapades mémorables depuis Paris.</p>
+    </section>
+
+    <section id="amenities" class="container my-5">
+        <h2 class="section-title text-center">Équipements Principaux</h2>
+        <div class="row g-4">
+            <div class="col-md-4"><div class="amenity-card card h-100 p-4 text-center"><h5>Piscine chauffée extérieure</h5></div></div>
+            <div class="col-md-4"><div class="amenity-card card h-100 p-4 text-center"><h5>Terrain de basket</h5></div></div>
+            <div class="col-md-4"><div class="amenity-card card h-100 p-4 text-center"><h5>Jardin + Grande terrasse</h5></div></div>
+            <div class="col-md-4"><div class="amenity-card card h-100 p-4 text-center"><h5>Barbecue et espace extérieur</h5></div></div>
+            <div class="col-md-4"><div class="amenity-card card h-100 p-4 text-center"><h5>Salle de jeux</h5></div></div>
+            <div class="col-md-4"><div class="amenity-card card h-100 p-4 text-center"><h5>Bain nordique / Jacuzzi</h5></div></div>
+        </div>
+    </section>
+
+    <section id="gallery" class="container my-5 py-5">
+        <h2 class="section-title text-center">Galerie</h2>
+        <div class="row g-4">
+            <div class="col-md-4 gallery-item">
+                <img src="https://media.vrbo.com/lodging/82000000/81520000/81510900/81510855/76799030.jpg" class="img-fluid" alt="Piscine extérieure">
+                <div class="gallery-overlay">Piscine chauffée en plein air</div>
+            </div>
+            <div class="col-md-4 gallery-item">
+                <img src="https://media.vrbo.com/lodging/82000000/81520000/81510900/81510855/35f334c6.jpg" class="img-fluid" alt="Terrasse">
+                <div class="gallery-overlay">Terrasse et espace détente</div>
+            </div>
+            <div class="col-md-4 gallery-item">
+                <img src="https://media.vrbo.com/lodging/82000000/81520000/81510900/81510855/b403c168.jpg" class="img-fluid" alt="Intérieur">
+                <div class="gallery-overlay">Salon spacieux</div>
+            </div>
+            <div class="col-md-4 gallery-item">
+                <img src="https://media.vrbo.com/lodging/82000000/81520000/81510900/81510855/d95c8024.jpg" class="img-fluid" alt="Dîner">
+                <div class="gallery-overlay">Espace dîner extérieur</div>
+            </div>
+            <div class="col-md-4 gallery-item">
+                <img src="https://media.vrbo.com/lodging/73000000/72690000/72690000/72689955/715df98a.jpg" class="img-fluid" alt="Vue aérienne">
+                <div class="gallery-overlay">Vue aérienne de la propriété</div>
+            </div>
+            <div class="col-md-4 gallery-item">
+                <img src="https://media.vrbo.com/lodging/73000000/72690000/72690000/72689955/669b4248.jpg" class="img-fluid" alt="Piscine">
+                <div class="gallery-overlay">Piscine chauffée en action</div>
+            </div>
+        </div>
+    </section>
+
+<section id="reservation" class="container my-5 py-5 bg-white rounded shadow">
+  <h2 class="section-title text-center">Faites votre Demande de Réservation</h2>
+  <p class="text-center">Remplissez le formulaire et envoyez – nous répondrons rapidement !</p>
+
+  <form id="reservaForm" class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">Nom</label>
+      <input type="text" class="form-control" id="nome" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Email / Réseau social</label>
+      <input type="text" class="form-control" id="email" required>
+    </div>
+    <div class="col-12">
+      <label class="form-label">Nom du lieu</label>
+      <input type="text" class="form-control" id="lugar" required value="Crazy Villa Le Tertre 28" readonly>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Dates souhaitées</label>
+      <input type="date" class="form-control" id="data" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Nombre de jours</label>
+      <input type="number" class="form-control" id="tempo" min="1" required>
+    </div>
+    <div class="col-12">
+      <label class="form-label">Message / Questions</label>
+      <textarea class="form-control" id="mensagem" rows="4"></textarea>
+    </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-lg btn-primary px-5">Envoyer la Demande de Réservation</button>
+    </div>
+  </form>
+</section>
+
+<!-- EmailJS -->
+
+
+    <a href="#reservation" class="reserve-btn">Réserver Maintenant !</a>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2026 Crazy Villa Le Tertre 28 | Luxe à 2h de Paris | Prix à partir de 2 500 € / nuit (varie selon la saison)</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+    // Inicializa EmailJS
+    emailjs.init("noFa-uJI-ed4BP1Dy"); // sua Public Key
+
+    // Captura envio do formulário
+    document.getElementById("reservaForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Envia para EmailJS
+        emailjs.send("service_zj15ugo", "template_eym35jd", {
+        nome: document.getElementById("nome").value,
+        email_: document.getElementById("email").value,
+        lugar: document.getElementById("lugar").value,
+        email:"websolutions2024uk@gmail.com",
+        data: document.getElementById("data").value,
+        tempo: document.getElementById("tempo").value,
+        mensagem: document.getElementById("mensagem").value
+        })
+        .then(() => {
+        alert("Reserva enviada com sucesso!");
+        document.getElementById("reservaForm").reset();
+        })
+        .catch((error) => {
+        alert("Erro ao enviar: " + JSON.stringify(error));
+        });
+    });
+    </script>
+
+</body>
+</html>
